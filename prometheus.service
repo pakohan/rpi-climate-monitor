@@ -1,0 +1,14 @@
+[Unit]
+Description=Prometheus
+After=network.target auditd.service
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+ExecStart=/usr/local/prometheus/prometheus -storage.local.retention=8760h -storage.local.series-file-shrink-ratio=0.3 -storage.local.path=/srv/prometheus -config.file=/etc/prometheus/prometheus.yml
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

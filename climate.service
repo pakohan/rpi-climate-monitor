@@ -1,0 +1,14 @@
+[Unit]
+Description=Climate
+After=network.target auditd.service
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+ExecStart=/opt/climate
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
