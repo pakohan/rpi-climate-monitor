@@ -13,3 +13,5 @@ server so it can. When everthing is done, you should access the RPi Prometheus
 dashboard and check whether it is set up correctly. Then add a new Prometheus
 data source to Grafana and add the grafana_dashboard.json as your dashboard and
 you now should be seing what is going on around your sensor.
+
+See https://tutorials-raspberrypi.de/raspberry-pi-luftfeuchtigkeit-temperatur-messen-dht11-dht22/ for wiring.
