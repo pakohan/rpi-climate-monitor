@@ -23,6 +23,7 @@ sudo tar -C /usr/local -xzf go1.8.linux-armv6l.tar.gz
 
 echo "setting up Go bin environment"
 echo 'export PATH=$PATH:/usr/local/go/bin' >> $HOME/.profile
+source $HOME/.profile
 
 echo "getting dependencies for the climate.go server …"
 go get -d .
